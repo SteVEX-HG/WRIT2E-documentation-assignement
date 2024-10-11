@@ -14,7 +14,7 @@ Want to learn C++ but you don't know how to run your own code? This tutorial is 
 2. [Usage](#usage)
 3. [Contributing](#contributing)
 
-### 0. A Very Brief Intro to the Command Line
+## 0. A Very Brief Intro to the Command Line
 
 
 
@@ -22,22 +22,22 @@ Since you will be using the command line terminal frequently in the installation
 
 <ul>
 
-#### What is the command line?
+### What is the command line?
 The command line is  a text-based interface that allows users to directly interact with a software or the operating system. On Windows, the most frequently used command line is called the **Command Prompt (cmd)**. Some softwares may come with their own command lines, but the logic behind them is the same.
 
-#### How to open the Command Prompt?
+### How to open the Command Prompt?
 <ul>
 
-##### 1.  Press `Win + R`
+#### 1.  Press `Win + R`
 >This should open the Run window like this.
 <img src=".\images\run-window.png" style="width: 300px">
 
-##### 2. Enter `cmd`, and press `Enter`
+#### 2. Enter `cmd`, and press `Enter`
 >Now you should see the Command Prompt window pop up.
 <img src=".\images\command-prompt.png" style="width: 400px">
 </ul>
 
-#### How to use the Command Prompt?
+### How to use the Command Prompt?
 <ul>
 
 In the command prompt, you are always on a *current directory* (folder). A **directory** is a location on your computer where files are stored. It's simply the series of folders that you would click through in the file explorer in order to get to that location. You can see your current directory here
@@ -47,8 +47,10 @@ In the command prompt, you are always on a *current directory* (folder). A **dir
 *(In this example, we are in the `Lenovo` folder that's within the `Users` folder that's in the `C` drive)*
 
 Following the current directory, you can type in a command. The command will execute after you press `Enter`, producing output in the command prompt window. It is always in the current directory that your command is executed. For example, the `dir` command lists all the folders and files in the current directory.
+
 <img src=".\images\dir.png" style="width: 400px"> 
 After the command output, the current directory is shown again and we can type in another command. For example, the command `cd` changes your current directory. The directory to change into is typed in following `cd`.
+
 <img src=".\images\cd.png" style="width: 300px"> 
 Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 </ul>
@@ -56,20 +58,20 @@ Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 Now that we have learned about the command line, let's begin the installation of the C++ development environment.
 </ul>
 
-### 1. Check Compiler Installation
+## 1. Check Compiler Installation
 
-### 2. Install MSYS2
+## 2. Install MSYS2
 
-### 3. Update MSYS2
+## 3. Update MSYS2
 
-### 4. Install MingGW-w64 Compiler and Debugger
+## 4. Install MingGW-w64 Compiler and Debugger
 
-### 5. Add PATH Environmental Variable
+## 5. Add PATH Environmental Variable
 
-### 6. Verify Installation
+## 6. Verify Installation
 
-### 7. Create .cpp file
+## 7. Create .cpp file
 
-### 8. Compile and Run
+## 8. Compile and Run
 
 ## What's Next?
