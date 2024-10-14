@@ -7,6 +7,7 @@ Want to learn C++ programming but you don't know how to run your own code? Don't
 > - You may use this tutorial for **Windows 11**, but some of the graphics may be different.
 >   - **Never** use this tutorial for MacOS or Linux systems.
 > <br/>
+> 
 > - Your machine is most likely 64-bit unless it's over a decade old.
 
 ## Overview
@@ -279,6 +280,7 @@ int main()
 - After the command executes, we can see that a `main.exe` has been generated and added to your project folder.
 
 > **Note**
+> 
 > Use `g++` to compile `C++` code, and `gcc` to compile `C` code.
 
 #### iv. Enter `main` in the command prompt
