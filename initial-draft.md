@@ -1,38 +1,43 @@
 # How to Install C++ Development Environment On Windows
 
-Want to learn C++ programming but you don't know how to run your own code? Don't worry! This tutorial is going to guide you through the process of installing a C++ compiler and running your code in the command line. You don't need any previous programming experience or pre-installed software on your machine to get started!
+Want to learn C++ programming but you don't know how to run your own code? Don't worry! This tutorial is going to guide you through the process of setting up a C++ development environment and running your code in the command line. You don't need to have any previous programming experience or pre-installed software on your machine to get started!
 
 > #### Note
-> This tutorial is only intended for **64-bit** machines running the **Windows 10** operating system, as the procedure for installing a C++ development environment varies across different operating systems. 
+> This tutorial is only intended for **64-bit** machines running the **Windows 10** operating system, as a C++ development environments varies significantly across different operating systems. 
 > - You may use this tutorial for **Windows 11**, but some of the graphics may be different.
->   - **Never** use this tutorial for MacOS or Linux.
+>   - **Never** use this tutorial for MacOS or Linux systems.
 > <br/>
 > - Your machine is most likely 64-bit unless it's over a decade old.
 
 ## Overview
-A C++ Development environment ultimately boils down to a C++ **complier**, which makes it possible for Windows to run your own code, and a **debugger**, which runs the code in a specific way that helps you fix mistakes in the code. Following this tutorial, you will install the compilers and debugger provided my MinGW. Then you will learn the most bare-bone way to write and compile a C++ program, namely with Notepad and the command line. Starting with this most basic form of development environment work will help you understand how to use more advanced environments later on.
+A C++ Development environment ultimately boils down to a C++ **complier**, which makes it possible for Windows to understand your own code, and a **debugger**, which runs the code in a specific way that helps you fix mistakes in the code. Following this tutorial, you will install the compiler and debugger provided by MinGW-w64. You will also learn the most bare-bone way to write and compile a C++ program, namely with Notepad and the command line. Starting with this most basic form of development environment is a great foundation that will help you understand more advanced environments later on.
 
 ---
 
 ## Contents
-1. [A Very Brief Intro to the Command Line](#a-very-brief-intro-to-the-command-line)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
+0. [A Very Brief Intro to the Command Line](#0)
+1. [Check Compiler Installation](#1)
+2. [Install MSYS2](#2)
+3. [Update MSYS2](#3)
+4. [Install MinGW-w64 Compiler and Debugger](#4)
+5. [Add PATH Environment Variable](#5)
+6. [Verify Installation](#6)
+7. [Create .cpp file](#7)
+8. [Complie and Run](#8)
+9. [What's Next?](#9)
 
 ---
 
-## 0. A Very Brief Intro to the Command Line
+## 0. A Very Brief Intro to the Command Line <a id='0'></a>
 
-Since you will be using the command line terminal frequently in the installation process, it's best to get to know it in the beginning. If you are already familiar with the command line, please skip this section.
+Since you will be using the command line terminal quite frequently in the installation process, it's best to get to know it in the beginning. If you are already familiar with the command line, please skip this section.
 
 
 
 ### What is the command line?
 <ul>
 
-The command line is  a text-based interface that allows users to directly interact with a software or the operating system. On Windows, the most frequently used command line is  the **Command Prompt (cmd)**. Some softwares may come with their own command lines, but the logic behind them is the same.
+The command line is  a text-based interface that allows users to interact directly with a software or the operating system. On Windows, the most frequently used command line is  the **Command Prompt (cmd)**. Some softwares may come with their own command lines, but the logic behind them is the same.
 </ul>
 
 ### How to open the Command Prompt?
@@ -41,7 +46,7 @@ The command line is  a text-based interface that allows users to directly intera
 
 #### i.  Press `Win + R`
 
-- This should open the Run window like this:
+- This should open the `Run` window like this:
 
 <ul><img src=".\images\run-window.png" style="width: 300px"></ul>
 
@@ -56,7 +61,7 @@ The command line is  a text-based interface that allows users to directly intera
 
 <ul>
 
-In the command prompt, you are always on a *current directory* (folder). A **directory** is a location on your computer where files are stored. It's simply represents the series of folders that you would click through in the file explorer in order to get to that location. The series of folders are separated by backslash `\`. You can see your current directory here:
+In the command prompt, you are always on a *current directory* (folder). A **directory** is a location on your computer where files are stored. It simply represents the series of folders that you would click through in the file explorer in order to get to that location. The series of folders are separated by backslash `\`. You can see your current directory here:
 
 <img src=".\images\current-directory.png" style="width: 400px"> 
 
@@ -66,7 +71,7 @@ Following the current directory, you can type in a command. The command will exe
 
 <img src=".\images\dir.png" style="width: 400px"> 
 
-After the command output, the current directory is shown again and we can type in another command. For example, the command `cd` changes your current directory. The directory to change into is typed in following `cd`.
+After the command output, the current directory is shown again and we can type in another command. For example, the command `cd` changes your current directory. The directory to change into is typed in following `cd`. 
 
 <img src=".\images\cd.png" style="width: 300px"> 
 
@@ -78,13 +83,15 @@ Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 
 <ul>
 
-There are two types of directories. An **absolute directory** gives the full location of the directory. It always starts with a **root directory**, namely a drive of your computer, such as `C:\` representing the `C` drive. Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
+There are two types of directories. An <strong style="font-weight: 900;">absolute directory</strong> gives the full location of the directory. It always starts with a **root directory**, namely a drive of your computer, such as `C:\` representing the `C` drive. Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
+
 <img src=".\images\root-directory.png" style="width: 400px">
+
 Here, to get to the absolute directory `F:\SteamLibrary\steamapps` from a current directory in `C:\`, you must first use `F:` command to switch to the `F:\` root directory, then `cd` to the absolute directory.
 
 Another type of directories is the **relative directory**, which specifies how you would get to it from the current directory. For example, as shown in the diagram, if you are on the current directory `C:\school\math`, then the relative directory `notes\week1` refers to `C:\school\math\notes\week1`.
 
-You can also use `.` and `..` in your directory. `.` simply refers to the current directory, so `.\notes\week1` would be equivalent to `notes\week1`. On the other hand, `..` indicates the `parent directory`, which is one level up from the current directory. For example, on your current directory `C:\school\math`, `..\python\code` would refer to `C:\python\code`.
+You can also use `.` and `..` in your directory. `.` simply refers to the current directory, so `.\notes\week1` would be equivalent to `notes\week1`. On the other hand, `..` indicates the **parent directory**, which is one level up from the current directory. For example, on your current directory `C:\school\math`, the relative directory `..\python\code` would refer to `C:\python\code`.
 
 <img src=".\images\directory.png" style="width: 600px">
 
@@ -94,7 +101,7 @@ You can also use `.` and `..` in your directory. `.` simply refers to the curren
 Now that we have learned about the command line and how to `cd` to a directory, let's begin the installation of the C++ development environment.
 
 
-## 1. Check Compiler Installation
+## 1. Check Compiler Installation <a id='1'></a>
 <ul>
 
 You might already have a C++ compiler installed on your machine. To check this, from any current directory, enter the command `g++ --versions` into the command prompt.
@@ -106,15 +113,15 @@ You might already have a C++ compiler installed on your machine. To check this, 
 </ul>
 </ul>
 
-## 2. Install MSYS2
+## 2. Install MSYS2 <a id='2'></a>
 <ul>
 
-MSYS2 is a "Software Distribution and Building Platform for Windows". You don't need to know what any of this means. Just know that MSYS2 is a software helps you install some C++ tools. To install MSYS2:
+MSYS2 is a "Software Distribution and Building Platform for Windows". You don't need to know what any of this means. Just know that MSYS2 is a software that helps you install some development tools. To install MSYS2:
 
 #### i. Download MSYS2 installer
 - Go to the [MSYS2 Official Website](https://www.msys2.org/). Click the file to download.
 
-<img src=".\images\msys2-download.png" style="width: 500px"> 
+<ul><img src=".\images\msys2-download.png" style="width: 500px"> </ul>
 
 #### ii. Run the MSYS2 installer
 - Run the installer that you just downloaded.
@@ -122,7 +129,7 @@ MSYS2 is a "Software Distribution and Building Platform for Windows". You don't 
 
 </ul>
 
-## 3. Update MSYS2
+## 3. Update MSYS2 <a id='3'></a>
 <ul>
 
 #### i. Open MSYS2 Command Line
@@ -148,8 +155,8 @@ MSYS2 is a "Software Distribution and Building Platform for Windows". You don't 
 
 </ul>
 
-## 4. Install MinGW-w64 Compiler and Debugger
-MinGW-w64 provides Windows versions of the open-source GNU compiler collection, which includes the gcc and g++ compiler and gdb debugger. To install MinGW-w64 through MSYS2:
+## 4. Install MinGW-w64 Compiler and Debugger <a id='4'></a>
+MinGW-w64 provides Windows versions of the open-source *GNU compiler collection*, which includes the **gcc** and **g++** compiler and the **gdb** debugger. To install MinGW-w64 through MSYS2:
 <ul>
 
 #### i. Open the MSYS2 command line, as in STEP 3 - i
@@ -176,9 +183,9 @@ MinGW-w64 provides Windows versions of the open-source GNU compiler collection, 
 
 </ul>
 
-## 5. Add PATH Environmental Variable
+## 5. Add PATH Environment Variable <a id='5'></a>
 
-When you enter a command in the command line, the operating system will look for that command in the directories listed in the **PATH environment variable**. In order to use the commands for C++ compiler and debugger, we first need to add their directory to the PATH environment variable. To do this:
+When you enter a command in the command line, the operating system will look for that command in the directories listed in the **PATH environment variable**, in addition to the current directory. So in order to use the commands for C++ compiler and debugger in any directory, we first need to add their directory to the PATH environment variable. To do this:
 
 <ul>
 
@@ -210,17 +217,19 @@ When you enter a command in the command line, the operating system will look for
 
 </ul>
 
-## 6. Verify Installation
+## 6. Verify Installation <a id='6'></a>
 
-To verify installation, similar to STEP 1, enter the commands `g++ --version`, `gcc --version`, and `gdb --version` in to the command prompt, one at a time.
+To verify installation, similar to STEP 1, enter the commands `g++ --version`, `gcc --version`, and `gdb --version` into the command prompt, one at a time.
 
-If all three of them produce copyright messages like the one shown below, great job! You have successfully installed a C++ development environment. 
+If all three of them produce copyright messages like the one shown below, great job! You have successfully installed a C++ compiler and debugger. 
 
 <img src=".\images\g++confirm.png" style="width: 500px">
 
+Otherwise, if you still get the error message saying that the command cannot be recognized, check the system PATH environment variable again.
+
 Now let's try compiling a file through the command line.
 
-## 7. Create .cpp file
+## 7. Create .cpp file <a id='7'></a>
 
 The job of the C++ compiler is to turn you code file (called the source file, usually with suffix `.cpp`) into an executable file (with suffix `.exe`) that can be run like any other application on your computer. Let's write a simple C++ program and then test it out.
 <ul>
@@ -252,7 +261,7 @@ int main()
 #### v. Press `Ctrl + S` to save the file. Then close the Notepad
 </ul>
 
-## 8. Compile and Run
+## 8. Compile and Run <a id='8'></a>
 <ul>
 
 #### i. Open command prompt
@@ -267,13 +276,25 @@ int main()
   - `-o` is a *flag* that gives you the option to name the output file
   - `main.exe` specifies the name of the output file
   
-- After the command executes, we can see that a `main.exe` appears in your project folder.
+- After the command executes, we can see that a `main.exe` has been generated and added to your project folder.
+
+> **Note**
+> Use `g++` to compile `C++` code, and `gcc` to compile `C` code.
 
 #### iv. Enter `main` in the command prompt
-- This will run the program we just created. You should see `Hello World!` printed in the command prompt.
+- This will run the `main.exe` we just created. You should see `Hello World!` printed in the command prompt.
 
 <ul> <img src=".\images\hello-world.png" style="width: 500px"> </ul>
 
 </ul>
 
-## What's Next?
+## What's Next? <a id='9'></a>
+Congratulations! Now you have a basic C++ development environment working. 
+
+However, you might have noticed that the process of compiling a program is actually quite cumbersome. This is why you would want to get an **Intergrated Development Environment (IDE)**. An IDE is a software that integrates text editor, command line, compiler, debugger, and many other useful tools in a single graphical interface. It also offers many assistive features that will improve your productivity and code readability, such as automated formatting, syntax highlighting, autocomplete, and even AI. The IDE is indeed a very powerful and customizable tool. No wonder why no one really writes code with Notepad these days.
+
+You should start looking into getting an IDE such as [Visual Studio Code](https://code.visualstudio.com/). You will be surprised how the fundamental features of an IDE behind its fancy interface is really just what we have covered in this tutorial.
+
+If you want to learn more about C++ programming, check out this fantastic free [tutorial](https://www.learncpp.com/).
+
+Wish you best of luck in your coding journey!
