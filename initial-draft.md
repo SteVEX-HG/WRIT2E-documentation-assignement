@@ -299,3 +299,12 @@ You should start looking into getting an IDE such as [Visual Studio Code](https:
 If you want to learn more about C++ programming, check out this fantastic free [tutorial](https://www.learncpp.com/).
 
 Wish you best of luck in your coding journey!
+
+<br>
+<br>
+
+---
+
+#### Reference
+
+LearningLad. *How to Download and Install C Cpp Toolset ( gcc g++ gdb ) in Windows 11 using mingw-w64 and msys2* Youtube, https://www.youtube.com/watch?v=0HD0pqVtsmw
