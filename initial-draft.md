@@ -83,7 +83,7 @@ Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 
 <ul>
 
-There are two types of directories. An <strong style="font-weight: 900;">absolute directory</strong> gives the full location of the directory. It always starts with a **root directory**, namely a drive of your computer, such as `C:\` representing the `C` drive. Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
+There are two types of directories. An **absolute directory** gives the full location of the directory. It always starts with a **root directory**, namely a drive of your computer, such as `C:\` representing the `C` drive. Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
 
 <img src=".\images\root-directory.png" style="width: 400px">
 
@@ -201,7 +201,7 @@ When you enter a command in the command line, the operating system will look for
 
 #### iii. Click on `Environmental Variables...`
 
-<ul> <img src=".\images\variables....png" style="width: 350px"> </ul>
+<ul> <img src=".\images\variables.png" style="width: 350px"> </ul>
 
 #### iv. Select the `Path` entry in the lower system variables section. Then click `Edit...`
 
