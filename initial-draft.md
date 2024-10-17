@@ -11,7 +11,7 @@ Want to learn C++ programming but you don't know how to run your own code? Don't
 > - Your machine is most likely 64-bit unless it's over a decade old.
 
 ## Overview
-A C++ Development environment ultimately boils down to a C++ ***complier***, which makes it possible for Windows to understand your own code, and a ***debugger***, which runs the code in a specific way that helps you fix mistakes in the code. Following this tutorial, you will install the compiler and debugger provided by MinGW-w64. You will also learn the most bare-bone way to write and compile a C++ program, namely with Notepad and the command line. Starting with this most basic form of development environment is a great foundation that will help you understand more advanced environments later on.
+A C++ Development environment ultimately boils down to a C++ ***compiler***, which makes it possible for Windows to understand your own code, and a ***debugger***, which runs the code in a specific way that helps you fix mistakes in the code. Following this tutorial, you will install the compiler and debugger provided by MinGW-w64. You will also learn the most bare-bone way to write and compile a C++ program, namely with Notepad and the command line. Starting with this most basic form of development environment is a great foundation that will help you understand more advanced environments later on.
 
 ---
 
@@ -105,7 +105,7 @@ Now that we have learned about the command line and how to `cd` to a directory, 
 ## 1. Check Compiler Installation <a id='1'></a>
 <ul>
 
-You might already have a C++ compiler installed on your machine. To check this, from any current directory, enter the command `g++ --versions` into the command prompt.
+You might already have a C++ compiler installed on your machine. To check this, from any current directory, enter the command `g++ --version` into the command prompt.
 
 - If a copyright message shows up, it means your compiler should be properly installed. Congratulations! You can skip to step 7 to learn how to compiler a c++ file using the command line.
 - Otherwise, if you see an error message like this, it means you don't have the g++ compiler installed. You should proceed with this tutorial.
@@ -232,7 +232,7 @@ Now let's try compiling a file through the command line.
 
 ## 7. Create .cpp file <a id='7'></a>
 
-The job of the C++ compiler is to turn you code file (called the source file, usually with suffix `.cpp`) into an executable file (with suffix `.exe`) that can be run like any other application on your computer. Let's write a simple C++ program and then test it out.
+The job of the C++ compiler is to turn your code file (called the source file, usually with suffix `.cpp`) into an executable file (with suffix `.exe`) that can be run like any other application on your computer. Let's write a simple C++ program and then test it out.
 <ul>
 
 #### i. Create a new folder anywhere on your computer
