@@ -146,7 +146,8 @@ MSYS2 is a "Software Distribution and Building Platform for Windows". You don't 
 #### ii. Enter `pacman -Syu` command
 - This updates all the local package databases. The command line output should look like this:
 
-> [!Note] ***Copy-Pasting into the command line***
+> [!Note] 
+> ***Copy-Pasting into the command line***
 > You can't paste a command in to MSYS2 the command line using `Ctrl + V`. Instead, to paste, right click and select `paste`.
 
 <ul>
