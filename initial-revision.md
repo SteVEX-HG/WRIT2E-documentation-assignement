@@ -295,9 +295,10 @@ int main()
 > 
 > **2.** Click on the directory bar near the top of the window so that the directory is selected
 > 
-> <ul> <img src=".\images\directory-bar.png" style="width: 400px"> </ul>
+> <ul> <img src=".\images\directory-bar.png" style="width: 450px"> </ul>
 > 
 > **3.** Copy the directory
+> 
 >  This would be the *absolute directory* of your project folder. You can then directly `cd` to this directory, but make sure to change your root directory first if the project folder is on a different drive.
 
 #### iii. Enter the command `g++ main.cpp -o main.exe`
