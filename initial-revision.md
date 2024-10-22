@@ -4,7 +4,7 @@ Want to learn C++ programming but you don't know how to run your own code? Don't
 
 > [!Note]
 > This tutorial is only intended for ***64-bit*** machines running the ***Windows 10*** operating system, as a C++ development environments varies significantly across different operating systems. 
-> - You may use this tutorial for ***Windows 11***, but some of the graphics may be different.
+> - You may use this tutorial for ***Windows 11***. Some of the graphics may be different but the procedure is exactly the same.
 >   - ***Never*** use this tutorial for MacOS or Linux systems.
 > <br/>
 > 
@@ -24,7 +24,7 @@ A C++ Development environment ultimately boils down to a C++ ***compiler***, whi
 5. [Add PATH Environment Variable](#5)
 6. [Verify Installation](#6)
 7. [Create .cpp file](#7)
-8. [Complie and Run](#8)
+8. [Compile and Run](#8)
 9. [What's Next?](#9)
 
 ---
@@ -127,7 +127,7 @@ MSYS2 is a "Software Distribution and Building Platform for Windows". You don't 
 #### ii. Run the MSYS2 installer
 - Run the installer that you just downloaded.
 - Keep clicking on next and go through the installation process. You should have no reason to change the installation settings.
-
+<br>
 > [!Warning]
 > If for whatever reason you wish to change the installation folder and not use the default folder. Make sure you install MSYS2 into a **new empty folder**. 
 </ul>
@@ -289,8 +289,11 @@ int main()
 #### ii. `cd` to the directory of your `main.cpp` (the folder you created in STEP 7 - i)
 > [!Tip]
 > If you find it difficult to navigate through your files with commands, try this instead: 
+> 
 > **1.** Go into your folder containing the main.cpp file in the file explorer
+> 
 > **2.** Click on the directory bar near the top of the window so that the directory is selected
+> 
 > <ul> <img src=".\images\directory-bar.png" style="width: 400px"> </ul>
 > 
 > **3.** Copy the directory
@@ -319,7 +322,7 @@ int main()
 ## What's Next? <a id='9'></a>
 Congratulations! Now you have a basic C++ development environment working. 
 
-However, you might have noticed that the process of compiling a program is actually quite cumbersome. This is why you would want to get an ***Intergrated Development Environment (IDE)***. An IDE is a software that integrates text editor, command line, compiler, debugger, and many other useful tools in a single graphical interface. It also offers many assistive features that will improve your productivity and code readability, such as automated formatting, syntax highlighting, autocomplete, and even AI. The IDE is indeed a very powerful and customizable tool. No wonder why no one really writes code with Notepad these days.
+However, you might have noticed that the process of compiling a program is actually quite cumbersome. This is why you would want to get an ***Integrated Development Environment (IDE)***. An IDE is a software that integrates text editor, command line, compiler, debugger, and many other useful tools in a single graphical interface. It also offers many assistive features that will improve your productivity and code readability, such as automated formatting, syntax highlighting, autocomplete, and even AI. The IDE is indeed a very powerful and customizable tool. No wonder why no one really writes code with Notepad these days.
 
 You should start looking into getting an IDE such as [Visual Studio Code](https://code.visualstudio.com/). You will be surprised how the fundamental features of an IDE behind its fancy interface is really just what we have covered in this tutorial.
 
