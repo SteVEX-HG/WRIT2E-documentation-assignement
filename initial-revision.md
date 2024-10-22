@@ -128,6 +128,7 @@ MSYS2 is a "Software Distribution and Building Platform for Windows". You don't 
 - Run the installer that you just downloaded.
 - Keep clicking on next and go through the installation process. You should have no reason to change the installation settings.
 <br>
+
 > [!Warning]
 > If for whatever reason you wish to change the installation folder and not use the default folder. Make sure you install MSYS2 into a **new empty folder**. 
 </ul>
