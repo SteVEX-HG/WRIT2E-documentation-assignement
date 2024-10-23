@@ -80,21 +80,36 @@ Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 
 </ul>
 
-### More about `cd` and directories
-
+### Absolute and Relative Directories
 <ul>
 
-There are two types of directories. An ***absolute directory*** gives the full location of the directory. It always starts with a ***root directory***, namely a drive of your computer, such as `C:\` representing the `C` drive. Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
+#### Absolute Directory
+
+An ***absolute directory*** specifies the full location of a directory on your machine. It always starts with a ***root directory***, namely a drive of your computer, such as `C:\` representing the `C` drive.
+
+#### - Using Absolute Directory
+
+Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
 
 <img src=".\images\root-directory.png" style="width: 400px">
 
 Here, to get to the absolute directory `F:\SteamLibrary\steamapps` from a current directory in `C:\`, you must first use `F:` command to switch to the `F:\` root directory, then `cd` to the absolute directory.
 
-Another type of directories is the ***relative directory***, which specifies how you would get to it from the current directory. For example, as shown in the diagram, if you are on the current directory `C:\school\math`, then the relative directory `notes\week1` refers to `C:\school\math\notes\week1`.
+#### Relative Directory
 
-You can also use `.` and `..` in your directory. `.` simply refers to the current directory, so `.\notes\week1` would be equivalent to `notes\week1`. On the other hand, `..` indicates the ***parent directory***, which is one level up from the current directory. For example, on your current directory `C:\school\math`, the relative directory `..\python\code` would refer to `C:\python\code`.
+Another type of directories is the ***relative directory***, it is relative to your current directory and specifies the path you would take to get to it from your current directory. 
+
+#### - Using Relative Directory
+
+Let's look at the directory tree in the following graph as an example. Say that you are on the current directory `C:\school\math`, then the relative directory `notes\week1` refers to `C:\school\math\notes\week1`.
 
 <img src=".\images\directory.png" style="width: 600px">
+
+You can also use `.` and `..` in your relative directory. `.` simply refers to the current directory, so `.\notes\week1` would be equivalent to `notes\week1`. 
+
+On the other hand, `..` indicates the ***parent directory***, which is one level up from the current directory. For example, on your current directory `C:\school\math`, the relative directory `..\python\code` would refer to `C:\python\code`.
+
+
 
 </ul>
 
