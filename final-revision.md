@@ -159,14 +159,20 @@ MSYS2 is a "Software Distribution and Building Platform for Windows". You don't 
 </ul>
 
 #### ii. Enter `pacman -Syu` command
-- This updates all the local package databases. The command line output should look like this:
+
+<ul>
 
 > [!Note] 
 > ***Copy-Pasting into the command line***
 > 
 > You can't paste a command in to MSYS2 the command line using `Ctrl + V`. Instead, to paste, right click and select `paste`.
 
+</ul>
+
+- This updates all the local package databases. The command line output should look like this:
+
 <ul>
+
 <img src=".\images\-syu.png" style="width: 500px"> 
 </ul>
 
@@ -305,6 +311,8 @@ int main()
 #### i. Open command prompt
 
 #### ii. `cd` to the directory of your `main.cpp` (the folder you created in STEP 7 - i)
+<ul>
+
 > [!Tip]
 > If you find it difficult to navigate through your files with commands, try this instead: 
 > 
@@ -317,6 +325,8 @@ int main()
 > **3.** Copy the directory
 > 
 >  This would be the *absolute directory* of your project folder. You can then directly `cd` to this directory, but make sure to change your root directory first if the project folder is on a different drive.
+
+</ul>
 
 #### iii. Enter the command `g++ main.cpp -o main.exe`
 
