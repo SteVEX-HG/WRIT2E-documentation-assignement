@@ -320,7 +320,7 @@ int main()
 > 
 > **2.** Click on the directory bar near the top of the window so that the directory is selected
 > 
-> <ul> <img src=".\images\directory-bar.png" style="width: 450px"> </ul>
+> <ul> <img src=".\images\directory-bar.png" style="width: 500px"> </ul>
 > 
 > **3.** Copy the directory
 > 
