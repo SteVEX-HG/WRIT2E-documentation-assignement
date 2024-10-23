@@ -337,9 +337,12 @@ int main()
   - `main.exe` specifies the name of the output file
   
 - After the command executes, we can see that a `main.exe` has been generated and added to your project folder.
+<ul>
 
 > [!Note]
 > Use `g++` to compile `C++` code, and `gcc` to compile `C` code.
+
+</ul>
 
 #### iv. Enter `main` in the command prompt
 - This will run the `main.exe` we just created. You should see `Hello World!` printed in the command prompt.
