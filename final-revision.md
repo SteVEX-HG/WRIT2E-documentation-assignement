@@ -83,7 +83,7 @@ Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 ### Absolute and Relative Directories
 <ul>
 
-#### <u>Absolute Directory</u>
+#### <ins>Absolute Directory</ins>
 
 An ***absolute directory*** specifies the full location of a directory on your machine. It always starts with a ***root directory***, namely a drive of your computer, such as `C:\` representing the `C` drive.
 
