@@ -83,11 +83,11 @@ Now our current directory has been changed to `F:\SteamLibrary\steamapps`
 ### Absolute and Relative Directories
 <ul>
 
-#### Absolute Directory
+#### <u>Absolute Directory</u>
 
 An ***absolute directory*** specifies the full location of a directory on your machine. It always starts with a ***root directory***, namely a drive of your computer, such as `C:\` representing the `C` drive.
 
-#### - Using Absolute Directory
+#### <u>Using Absolute Directory</u>
 
 Since an absolute directory contains the full location, you can `cd` to an absolute directory no matter your current directory. The exception is that you can't `cd` to a directory that is located on another root directory (drive). Instead, you must switch the root directory first by directly typing it out. For example:
 
@@ -95,11 +95,11 @@ Since an absolute directory contains the full location, you can `cd` to an absol
 
 Here, to get to the absolute directory `F:\SteamLibrary\steamapps` from a current directory in `C:\`, you must first use `F:` command to switch to the `F:\` root directory, then `cd` to the absolute directory.
 
-#### Relative Directory
+#### <u>Relative Directory</u>
 
 Another type of directories is the ***relative directory***, it is relative to your current directory and specifies the path you would take to get to it from your current directory. 
 
-#### - Using Relative Directory
+#### <u>Using Relative Directory</u>
 
 Let's look at the directory tree in the following graph as an example. Say that you are on the current directory `C:\school\math`, then the relative directory `notes\week1` refers to `C:\school\math\notes\week1`.
 
@@ -134,7 +134,7 @@ You might already have a C++ compiler installed on your machine. To check this, 
 
 MSYS2 is a "Software Distribution and Building Platform for Windows". You don't need to know what any of this means. Just know that MSYS2 is a software that helps you install some development tools. To install MSYS2:
 
-#### i. Download MSYS2 installer
+####  i. Download MSYS2 installer
 - Go to the [MSYS2 Official Website](https://www.msys2.org/). Click the file to download.
 
 <ul><img src=".\images\msys2-download.png" style="width: 500px"> </ul>
